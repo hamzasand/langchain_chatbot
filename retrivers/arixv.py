@@ -1,11 +1,13 @@
 from langchain_community.retrievers import ArxivRetriever
 
-retriver = ArxivRetriever(
-    load_max_docs=2,
+# create the retriever
+retriever = ArxivRetriever(
+    load_max_docs=2,      # number of papers to retrieve
     load_all_available_meta=True
 )
 
-docs = retriver.invoke("large language models")
+# query arxiv
+docs = retriever.invoke("large language models")
 
 # print results
 for i, doc in enumerate(docs):
