@@ -19,7 +19,7 @@ detailed_prompt = ChatPromptTemplate.from_template(
 
 chain = RunnableParallel({
     "short": RunnableLambda(lambda x :x['short']) |short_prompt| model| parser,
-    "detailed": RunnableLambda(lambda x : x['detailed']| detailed_prompt| model| parser)
+    "detailed": RunnableLambda(lambda x : x['detailed'])| detailed_prompt| model| parser
 })
 
 result = chain.invoke({
