@@ -11,7 +11,7 @@ llm = ChatMistralAI(model = "mistral-small-2506")
 prompt = ChatPromptTemplate.from_template(
     """
     You are a helpful assitant who summarize the following 
-    new into clear bullet points {new}
+    new into clear bullet points {news}
     """
 )
 
