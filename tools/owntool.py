@@ -8,3 +8,7 @@ def get_greetings(name : str) -> str:
 
 result = get_greetings.invoke({"name":"Hamza"})
 print(result)
+
+print(get_greetings.name)
+print(get_greetings.description)
+print(get_greetings.args)
